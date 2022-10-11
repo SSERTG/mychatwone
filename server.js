@@ -1,5 +1,5 @@
 const express = require('express')
-const socket = require('socket.io')
+const socket = require('socket.io')(http,{cors:{origin:"*"}});
 
 const app = express()
 const server = app.listen(process.env.PORT || 3000, () => {

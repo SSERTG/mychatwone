@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyChat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans+Collegiate+One&family=Michroma&family=Oswald&family=Poppins&family=Roboto&family=Roboto+Condensed:wght@700&family=Rubik+Dirt&family=Silkscreen&family=VT323&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"
+        integrity="sha512-VJ6+sp2E5rFQk05caiXXzQd1wBABpjEj1r5kMiLmGAAgwPItw1YpqsCCBtq8Yr1x6C49/mTpRdXtq8O2RcZhlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="chat-wrap">
+        <p id="MyChatText">MyChat v1.0.0</p>
+        <div id="chat-window">
+            <div id="output"></div>
+        </div>
+        <div id="feedback-window">
+            <div id="feedback"></div>
+        </div>
+        <input type="text" id="message" placeholder="Choose a name to write a message..."><button
+            id="submitBtn">Send</button>
+        <div id="info-window">
+            <p id="info">You can use the /setname [Your Name] command to select a name. Example: /setname Dexter
+                <br>(Your name can be a maximum of 10 characters.)
+            </p>
+        </div>
+    </div>
+
+    <script src="chat.js" charset="UTF-8"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+input:focus,
+button:focus {
+    outline: 0;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    background-image: url('https://cutewallpaper.org/21/minecraft-stone-wallpaper/Minecraft-Wallpapers-Fan-Art-Show-Your-Creation-.png');
+    background-size: 100%, 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+
+#MyChatText {
+    font-size: 50px;
+    text-align: center;
+    color: rgb(228, 228, 228);
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+#chat-wrap {
+    max-width: 450px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    border-left: 15px solid black;
+    border-right: 15px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    background: url('https://steamuserimages-a.akamaihd.net/ugc/1616185636262114057/9D5535DF99DD6BC62A41659B9AC2B7030A1A0D78/');
+}
+
+#chat-window {
+    height: 450px;
+    background: rgb(82, 111, 112);
+    overflow-y: auto;
+    word-break: break-word;
+    padding-bottom: 0;
+}
+
+#message {
+    height: 30px;
+    width: 390px;
+    font-size: 25px;
+    font-family: 'VT323', monospace;
+    border: 5px solid rgb(65, 65, 65);
+    color: white;
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/77cbf476-3a0b-4ff8-89f3-a78bb2abad32/de4p4lo-0ae3ab60-59d5-4e4e-a069-7756e75186da.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc3Y2JmNDc2LTNhMGItNGZmOC04OWYzLWE3OGJiMmFiYWQzMlwvZGU0cDRsby0wYWUzYWI2MC01OWQ1LTRlNGUtYTA2OS03NzU2ZTc1MTg2ZGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ghXH7rLwFU3SOQgmuFdu2IC59ydup2rfJ2FX_C1eXb8');
+}
+
+#submitBtn {
+    font-family: 'VT323', monospace;
+    height: 40px;
+    width: 50px;
+    font-size: 23px;
+    color: white;
+    position: absolute;
+    border-right: 5px solid rgb(65, 65, 65);
+    transition: 0.3s all ease;
+    background: url('https://d31sxl6qgne2yj.cloudfront.net/wordpress/wp-content/uploads/20190102094846/Minecraft-Stone-Block.jpg');
+}
+
+#submitBtn:hover {
+    opacity: 0.9;
+}
+
+#info-window {
+    background-color: blanchedalmond;
+    height: 50px;
+    width: 100%;
+}
+
+#output {
+    font-size: 25px;
+}
+
+strong {
+    color: rgb(240, 184, 0);
+}
+
+#output p {
+    padding-left: 5px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#output p:nth-child(even) {
+    background-color: rgba(85, 85, 85, 0.418);
+}
+
+#feedback-window {
+    background: rgb(0, 0, 0);
+    width: 100%;
+    height: 25px;
+}
+#feedback{
+    color: white;
+    font-size: 23.5px;
+    padding-left: 5px;
+}
+#feedback p{
+    float: left;
+}
+#n1,#n2,#n3{
+    transition: 0.2s all ease;
+}

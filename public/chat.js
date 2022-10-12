@@ -6,6 +6,7 @@ let message = document.getElementById('message') //input
 let sendBtn = document.getElementById('submitBtn') //gönder butonu
 let output = document.getElementById('output') //mesaj çıktısı
 let feedback = document.getElementById('feedback') //yazıyor... durumu
+let typingSL = false //typing dedektörü
 
 sendBtn.addEventListener('click', sendFunc) //gönder buttonu tıklama dinleyicisi
 function sendFunc() {
@@ -80,12 +81,14 @@ socket.on('chat', data => {
     feedback.innerHTML = ''
     output.innerHTML += '<p><strong>' + data.sender + ':</strong>' + data.message + '</p>'
     message.value = ''
+    typingSL = false
 })
 
 message.addEventListener('keyup', typingFunc)
 function typingFunc(entKey) {
-    if (senderSL == true && message.value.startsWith("/setname ") == false && message.value.startsWith("/") == false && entKey.keyCode != 13 && entKey.keyCode != 20 && entKey.keyCode != 16 && entKey.keyCode != 17 && entKey.keyCode != 91 && entKey.keyCode != 9 && entKey.keyCode != 27 && entKey.keyCode != 112 && entKey.keyCode != 113 && entKey.keyCode != 114 && entKey.keyCode != 115 && entKey.keyCode != 116 && entKey.keyCode != 117 && entKey.keyCode != 118 && entKey.keyCode != 119 && entKey.keyCode != 120 && entKey.keyCode != 121 && entKey.keyCode != 122 && entKey.keyCode != 123 && entKey.keyCode != 8 && entKey.keyCode != 93 && entKey.keyCode != 192 && entKey.keyCode != 145 && entKey.keyCode != 19 && entKey.keyCode != 45 && entKey.keyCode != 36 && entKey.keyCode != 33 && entKey.keyCode != 46 && entKey.keyCode != 35 && entKey.keyCode != 34 && entKey.keyCode != 37 && entKey.keyCode != 38 && entKey.keyCode != 39 && entKey.keyCode != 40 && entKey.keyCode != 144) {
+    if (typingSL == false && senderSL == true && message.value.startsWith("/setname ") == false && message.value.startsWith("/") == false && entKey.keyCode != 13 && entKey.keyCode != 20 && entKey.keyCode != 16 && entKey.keyCode != 17 && entKey.keyCode != 91 && entKey.keyCode != 9 && entKey.keyCode != 27 && entKey.keyCode != 112 && entKey.keyCode != 113 && entKey.keyCode != 114 && entKey.keyCode != 115 && entKey.keyCode != 116 && entKey.keyCode != 117 && entKey.keyCode != 118 && entKey.keyCode != 119 && entKey.keyCode != 120 && entKey.keyCode != 121 && entKey.keyCode != 122 && entKey.keyCode != 123 && entKey.keyCode != 8 && entKey.keyCode != 93 && entKey.keyCode != 192 && entKey.keyCode != 145 && entKey.keyCode != 19 && entKey.keyCode != 45 && entKey.keyCode != 36 && entKey.keyCode != 33 && entKey.keyCode != 46 && entKey.keyCode != 35 && entKey.keyCode != 34 && entKey.keyCode != 37 && entKey.keyCode != 38 && entKey.keyCode != 39 && entKey.keyCode != 40 && entKey.keyCode != 144) {
         socket.emit('typing', sender)
+        typingSL = true
     }
 }
 

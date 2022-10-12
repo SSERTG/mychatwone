@@ -1,4 +1,4 @@
-const socket = io.connect('http://localhost:3000') //io bağlantısı
+const socket = io.connect() //io bağlantısı
 
 let sender //kullanıcı
 let senderSL = false //isim seçme dedektörü, false = isim seçilmemiş, true = isim seçilmiş

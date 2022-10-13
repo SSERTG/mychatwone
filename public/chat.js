@@ -92,8 +92,13 @@ function typingFunc(entKey) {
     }
 }
 
+var timeoutHandle;
 socket.on('typing', data => {
-    feedback.innerHTML += '<p>' + data + ' typing<p id="n1">.</p><p id="n2">.</p><p id="n3">.</p></p>'
+    if (timeoutHandle !== undefined) {
+        clearTimeout(timeoutHandle);
+    }
+    feedback.innerHTML = '<p>' + data + ' typing...</p>';
+
     let n1 = document.getElementById('n1');
     let n2 = document.getElementById('n2');
     let n3 = document.getElementById('n3');
@@ -115,9 +120,8 @@ socket.on('typing', data => {
             n3.style.color = 'gray'
         }
     }
-    // clear feedback after one second of inactivity
-    setTimeout(() => {
+
+    timeoutHandle = setTimeout(() => {
         feedback.innerHTML = ''
     }, 5000);
-    let timer = setInterval(autoColor, 250);
 })

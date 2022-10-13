@@ -97,7 +97,7 @@ socket.on('typing', data => {
     if (timeoutHandle !== undefined) {
         clearTimeout(timeoutHandle);
     }
-    feedback.innerHTML = '<p>' + data + ' typing...</p>';
+    feedback.innerHTML = '<p>' + data + ' typing<p id="n1">.</p><p id="n2">.</p><p id="n3">.</p></p>'
 
     let n1 = document.getElementById('n1');
     let n2 = document.getElementById('n2');

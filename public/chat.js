@@ -36,6 +36,7 @@ function sendFunc() {
             message: message.value,
             sender: sender
         })
+        message.value = ''
     }
     else if (!message.value.trim()) {
         alert('Invalid message.')
@@ -70,6 +71,7 @@ function entFunc(e) {
                 message: message.value,
                 sender: sender
             })
+            message.value = ''
         }
         else if (!message.value.trim()) {
             alert('Invalid message.')
@@ -80,7 +82,6 @@ function entFunc(e) {
 socket.on('chat', data => {
     feedback.innerHTML = ''
     output.innerHTML += '<p><strong>' + data.sender + ':</strong>' + data.message + '</p>'
-    message.value = ''
     typingSL = false
 })
 

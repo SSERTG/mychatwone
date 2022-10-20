@@ -8,6 +8,8 @@ let output = document.getElementById('output') //mesaj çıktısı
 let feedback = document.getElementById('feedback') //yazıyor... durumu
 let typingSL = false //typing dedektörü
 
+window.scrollTo(0,document.body.scrollHeight);
+
 sendBtn.addEventListener('click', sendFunc) //gönder buttonu tıklama dinleyicisi
 function sendFunc() {
     if (message.value.includes("/setname ") && senderSL == false && message.value.startsWith("/setname ") && message.value.length <= 19) {  //eğer mesaj yerinde /setname geçiyor ise, senderSL false ise, /setname ile başlıyor ise ve toplam 19 karakter veya daha küçük bir karakter ise
